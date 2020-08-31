@@ -1,0 +1,115 @@
+
+/*-------------   Color Variable  --------------*/
+
+//Colors
+$white: #ffffff;
+$black: #16161a;
+$gray:#f7f7fd;
+$gray-2: #f7f9f8;
+
+// font-color
+$heading-color:#212025;
+$heading_color2: rgb(36, 43, 94);
+
+//Theme color
+$theme-color: #117a97;
+$theme-color1:#f1cf69;
+$theme-color2: #08632b;
+$theme-color2-light:#6ba180;
+$theme-color2-light-2 :#d6ebde;
+// $theme-color2: #1f2b7b;
+$theme-color3: #f27420;
+$theme-color4: #ff3500;
+
+// Body Font
+$body-text-color: #212025;
+$hr-border-color:#eceff8;
+
+// btn and Section color
+$btn_bg: #08642b;
+
+// Section Bg
+$section_bg1: #454545;
+
+
+
+
+
+.white-bg{
+background: #ffffff;
+}
+.gray-bg{
+background: $gray-2;
+}
+
+.green-bg{
+    // background: rgba($theme-color2, .6);
+    background: $theme-color2-light-2;
+}
+
+
+$gray-color: #bebebe;
+$gray-color2: #bdbdbd;
+$gray-color3:#5c5c5c;
+$white_color:#fff;
+
+
+// font color
+$font_color1: #212025;
+
+$border_color: #fdcb9e;
+$footer_bg: #303030;
+$sidebar_bg: #fbf9ff;
+
+
+
+
+// bg
+$brand-bg: #f1f4fa;
+$testimonial-bg:#f9fafc;
+
+
+// Soft color
+$black-soft:#7e7e7e;
+
+// Section Bg color
+$blue-bg1:#00163e;
+
+
+
+
+/*-------------Color include--------------*/
+
+
+/*-- Background color---*/
+
+.gray-bg {
+background: $gray;
+}
+.white-bg {
+background:$white;
+}
+.black-bg {
+background: $black;
+}
+.theme-bg {
+background:$theme-color;
+}
+.brand-bg{
+background: $brand-bg;
+}
+.testimonial-bg{
+background: $testimonial-bg;
+}
+
+
+/*--- color------*/
+.white-color {
+color: $white;
+}
+.black-color {
+color: $black;
+}
+.theme-color {
+color: $theme-color;
+}

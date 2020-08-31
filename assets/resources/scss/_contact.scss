@@ -1,0 +1,111 @@
+.contact-area {
+    .bg {
+        &-1 {
+            background-color: #f7f9f8;
+            h2,
+            h4,
+            p,
+            a {
+                color: initial;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+        &-2 {
+            background-color: $footer_bg;
+            h2,
+            h4,
+            p {
+                color: #fff !important;
+            }
+        }
+    }
+
+    &__top {
+    }
+    &__bottom {
+        @media #{$xs} {
+            top: unset;
+        }
+        @media #{$sm} {
+            top: unset;
+        }
+        @media #{$md} {
+            top: -75px;
+        }
+    }
+    [class*=" col-"]:first-child .item,
+    .section-contact [class^="col-"]:first-child .item {
+        margin-left: auto;
+    }
+    .item {
+        position: relative;
+        max-width: 510px;
+        height: 100%;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        color: #fff;
+        @media #{$mobile_device} {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media #{$md} {
+            padding-top: 80px;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        @media #{$lg} {
+            max-width: 475px;
+            padding-top: 100px;
+        }
+        @media #{$laptop} {
+            max-width: 600px;
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+        @media only screen and (min-width: 768px) {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        @media only screen and (min-width: 1200px) {
+            max-width: 600px;
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+
+     
+       
+      
+    }
+}
+.open-time {
+    li:not(:last-child),
+    .mad-tag-list > li:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+}
+address {
+    margin-bottom: 45px;
+    p {
+        padding-left: 35px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        i {
+            float: left;
+            margin-left: -35px;
+            line-height: 1.6;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.social-btns a {
+    min-width: 1em;
+    line-height: 1;
+    font-size: 1.35rem;
+    letter-spacing: 0px;
+    margin: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out 0s, color 0.3s ease-in-out 0s;
+}

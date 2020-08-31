@@ -1,0 +1,108 @@
+.testimonials-area {
+    @media #{$xs}{
+        margin-top: 30px !important;
+    }
+    .slider-testimonials {
+        display: block;
+        height: 100%;
+        width: 100%;
+        max-width: 850px;
+        margin: 0 auto;
+        position: relative;
+        font-size: 1.125rem;
+        z-index: 0;
+    }
+    .slide {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        &-img {
+            width: 100%;
+            margin: 0 auto;
+            height: 100%;
+            padding: 40px;
+            background-image: url(../img/slider/pattern-bg.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        &-text {
+            padding-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-image: url(../img/slider/pattern-quotes.svg);
+            background-repeat: no-repeat;
+            background-size: 80px;
+            background-position: top center;
+        }
+    }
+    .testimonial-text {
+        font-weight: 300;
+        font-size: 1.125rem;
+        line-height: 2rem;
+        color: #202046;
+    }
+    .author-text {
+        margin-top: 20px;
+        color: #202046;
+        font-size: 0.875rem;
+        font-weight: 700;
+        span {
+            color: #babacf;
+            font-weight: 500;
+            display: block;
+        }
+    }
+    .author-text .slide-img img {
+        height: 100%;
+        width: 300px;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .slide {
+            flex-direction: row;
+            text-align: left;
+            &-text {
+                background-position: 10% top;
+                background-size: 100px;
+                align-items: flex-start;
+            }
+            &-img {
+                margin-left: -100px;
+                z-index: -1;
+                img {
+                    width: 350px;
+                }
+            }
+        }
+      
+        .owl-carousel .owl-dots{
+            text-align: center;
+        }
+        .owl-carousel button.owl-dot{
+            color: $theme-color;
+            border: 1px solid $gray-color;
+            background: 15px 15px;
+            width: 3rem;
+            margin: 0 3px;
+            &.active{
+                border: 1px solid $theme-color;
+            }
+        }
+    }
+  
+    @media #{$xs} {
+        .slide-img img {
+            width: 200px;
+            margin: 0 auto;
+        }
+        .slide-img {
+            padding: 10px;
+        }
+    }
+}

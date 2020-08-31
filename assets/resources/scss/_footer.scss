@@ -1,0 +1,122 @@
+.footer-area {
+    @media only screen and (min-width: 768px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .footer__item {
+        margin-bottom: 2rem;
+        .footer__menu {
+            display: flex;
+            flex-wrap: wrap;
+            & li {
+                margin-bottom: 15px;
+                text-transform: capitalize;
+                flex: 0 0 50%;
+                margin-bottom: 0.7rem;
+
+                & a {
+                    font-weight: 400;
+                    display: inline-block;
+                    vertical-align: top;
+                    font-size: 0.875rem;
+                    line-height: 1.2;
+                    text-transform: capitalize;
+                    color: inherit;
+                    text-decoration: none;
+                    &:hover {
+                        color: $theme-color2;
+                        padding-left: 5px;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        & p{
+            font-size: 0.75em;
+            line-height: 1.538;
+            color: inherit;
+            font-weight: 300;
+
+        }
+        & h4 {
+            font-family: $font_1;
+            margin-bottom: 38px;
+            font-weight: 500;
+        }
+    }
+    .footer__logo {
+        width: 253px;
+        height: auto;
+    }
+    .footer__copy {
+        margin-top: 40px;
+        line-height: 1.5;
+        font-size: 0.75rem;
+    }
+    a {
+        color: $theme-color2;
+    }
+
+    .single-input {
+        display: block;
+        width: 100%;
+        line-height: 40px;
+        border: none;
+        outline: none;
+        background: #f9f9ff;
+        padding: 0 20px;
+        font-size: .875em;
+        &:focus {
+            outline: none;
+        }
+    }
+    
+    .form-horizontal{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @media #{$mobile_device}
+        {
+            flex-direction: column;
+        }
+        .single-select-box{
+            &:first-child {
+                padding-right: 20px;
+            }
+            @media #{$lg}{
+                    // width: 80%;
+            }
+            @media #{$md}{
+                width: 48%;
+            }
+            @media #{$mobile_device}{
+                width: 108%;
+                .btn-outline{
+                    width: calc(100% - 20px);
+                }
+            }
+            @media #{$xs}{
+                width: 100%;
+              
+            }
+           
+        }
+
+    }
+}
+
+.footer-2{
+    background-color: $gray-2;
+    @media #{$xs}{
+        padding-top: 3rem ;
+        padding-bottom: 3rem;
+    }
+    @media #{$sm}{
+        padding-top: 3rem ;
+        padding-bottom: 3rem;
+    }
+    @media #{$md}{
+        padding-top: 3rem ;
+        padding-bottom: 3rem;
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "tastyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass assets/resources/scss/main.scss assets/resources/css/style.dev.css -w",
+    "prefix:css": "postcss --use autoprefixer -b \"'last 15 versions'\"  assets/resources/css/style.dev.css -o assets/resources/css/style.css",
+    "compress:css": "node-sass assets/resources/css/style.css assets/resources/css/style.min.css --output-style compressed"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.5",
+    "postcss-cli": "^7.1.1"
+  }
+}

@@ -1,0 +1,194 @@
+.menu-area {
+    &-top {
+        // background: #f7f9f8;
+
+    }
+    &-header{
+        position: relative;
+        background-attachment: fixed;
+        .section-tittle{
+            h2{
+                color: #fff;
+            }
+            span{
+                color: #e2f5ff !important;
+            }
+        }
+        *{
+            z-index: 2;
+        }
+        &::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            background: rgba(0,33,50,0.4);
+            // background-image: linear-gradient(rgba($theme-color2, 0.3),rgba($theme-color2, 0.3));
+         }
+        
+    }
+    // Tabs Button Style
+    .nav-tabs {
+        margin-bottom: 15px;
+        padding-bottom: 0px;
+        position: relative;
+        border: 0;
+        display: flex;
+        justify-content: center;
+        .nav-limk {
+            background: transparent;
+            padding: 5px 22px;
+            border-radius: 0;
+            border: 0;
+            color: #212025;
+        }
+        .nav-item {
+            text-transform: capitalize;
+            padding: 0.6rem 1.5rem 0.4rem;
+            border: 2px solid $theme-color2;
+            font-size: 1.3rem;
+            display: block;
+            color: #1b1b1b;
+            font-size: 16px;
+            margin: 0 1rem;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+            -o-transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+            @media #{$md} {
+                margin: 0 15px;
+            }
+            @media #{$sm} {
+                margin: 0 0px;
+            }
+            @media #{$xs} {
+                margin: 15px 0px;
+            }
+        }
+    }
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link.active,
+    .nav-tabs .nav-link:hover {
+        color: #fff;
+        border-color: $theme-color2;
+        background-color: $theme-color2;
+    }
+}
+
+.menu-preview {
+    display: grid;
+    margin: 0 18.75rem;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 0rem;
+    }
+    @media #{$large_mobile} {
+        margin: 0 1rem;
+    }
+    @media #{$tab} {
+        margin: 0;
+    }
+    @media #{$lg} {
+        margin: 0 3.5rem;
+    }
+    @media #{$laptop} {
+        margin: 0 7.5rem;
+    }
+}
+.menu {
+    .item {
+        &-menu__box {
+            position: relative;
+            margin: 0 0 2rem 0;
+            border: none;
+            transition: transform 0.3s;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            border-radius: 0;
+            
+        }
+        &-menu__img {
+            max-width: 88px;
+            width: 100%;
+            min-width: 88px;
+            margin-right: 1.5rem;
+            @media #{$tab} {
+                width: 150px;
+            }
+            img {
+                vertical-align: top;
+                max-width: 100%;
+            }
+        }
+        &-menu__block:first-child{
+            width: calc(100% - 35px);
+            @media #{$xs} {
+                width: 100%;
+            }
+        }
+        &-menu__block {
+            padding: 0.5rem 0 0.5rem 0rem;
+            position: relative;
+            width: calc(100% - 135px);
+            display: flex;
+            flex-direction: column;
+            @media #{$tab} {
+                width: calc(100% - 150px);
+            }
+        }
+
+        &__header {
+            display: flex;
+            align-items: baseline;
+        }
+
+        &__title {
+            font-size: 1.225rem;
+            color: inherit;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        &__dots {
+            flex: 1;
+            border-bottom: 1px dashed $gray-color3;
+            margin: 0 15px;
+            @media #{$xs} {
+                margin: 0;
+                // border-bottom: unset;
+                // flex: unset;
+            }
+        }
+
+        &__price {
+            color: inherit;
+            padding: 0.4rem 0.8rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+
+        &__description {
+            color: #7a7879;
+            font-size: 0.875rem;
+            font-style: italic;
+            line-height: 1rem;
+            margin-bottom: 2rem;
+            margin-top: 0.5rem;
+            &:not(:last-child) {
+                margin-bottom: 0.3rem;
+            }
+        }
+
+        &__link {
+            color: #08642b;
+            font-size: 0.75rem;
+        }
+    }
+   
+}

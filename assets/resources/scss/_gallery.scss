@@ -1,0 +1,161 @@
+.gallery-area {
+    overflow: hidden;
+    /*-----------------*/
+    /***** Hera *****/
+    /*-----------------*/
+    figure {
+        margin: 0;
+        background-color: #f7f9f8;
+    }
+
+    figure.effect-hera {
+        position: relative;
+        .overlay{
+            height: 100%;
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                // background-image: linear-gradient(rgba(241, 207, 105, 0.3), rgba(241, 207, 105, 0.3)); 
+                background-image: linear-gradient(rgba(48,48, 48, 0.6), rgba(48, 48, 48, 0.6)); 
+            }
+        }
+        figcaption::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            border: 2px solid $theme-color2;
+            content: "";
+            opacity: 0;
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(0, 0, 1);
+            transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(0, 0, 1);
+            -webkit-transform-origin: 50%;
+            transform-origin: 50%;
+            // background-color: rgba(11, 14, 13, 0.702);
+            background-color: rgba(8, 100,43, 1);
+
+            @media #{$tab2} {
+                height: 111px;
+                width: 111px;
+            }
+            @media #{$xs} {
+                background-color: unset;
+                border: unset;
+            }
+        }
+
+        &::after {
+            position: relative;
+            top: 0;
+            left: 0;
+            clear: float;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+        p {
+            width: 81px;
+            text-transform: none;
+            font-size: 121%;
+            line-height: 2;
+            a {
+                color: #fff;
+                &:hover {
+                    opacity: 0.6;
+                }
+                &:focus {
+                    opacity: 0.6;
+                }
+                .gallery__icon {
+                    opacity: 0;
+                    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+                    transition: opacity 0.35s, transform 0.35s;
+                }
+                &:first-child .gallery__icon {
+                    -webkit-transform: translate3d(-60px, -60px, 0);
+                    transform: translate3d(-60px, -60px, 0);
+                }
+                &:nth-child(2) .gallery__icon {
+                    -webkit-transform: translate3d(60px, -60px, 0);
+                    transform: translate3d(60px, -60px, 0);
+                }
+                &:nth-child(3) .gallery__icon {
+                    -webkit-transform: translate3d(-60px, 60px, 0);
+                    transform: translate3d(-60px, 60px, 0);
+                }
+                // &:nth-child(4) .gallery__icon {
+                //     -webkit-transform: translate3d(60px, 60px, 0);
+                //     transform: translate3d(60px, 60px, 0);
+                // }
+            }
+        }
+        &:hover figcaption::before {
+            opacity: 1;
+            -webkit-transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
+            transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -45deg) scale3d(1, 1, 1);
+        }
+
+        &:hover h4 {
+            opacity: 0;
+            -webkit-transform: translate3d(-50%, -50%, 0) scale3d(0.8, 0.8, 1);
+            transform: translate3d(-50%, -50%, 0) scale3d(0.8, 0.8, 1);
+        }
+
+        &:hover p .gallery__icon:empty {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); /* just because it's stronger than nth-child */
+            opacity: 1;
+        }
+        h4 {
+            color: #fff;
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 12px;
+            @include transition(0.4s);
+            @media #{$large1} {
+                font-size: 34px;
+            }
+            @media #{$lg} {
+                font-size: 30px;
+            }
+            @media #{$md} {
+                font-size: 35px;
+            }
+            @media #{$sm} {
+                font-size: 30px;
+            }
+            @media #{$xs} {
+                font-size: 30px;
+            }
+        }
+        img {
+            object-fit: cover;
+            min-height: 100%;
+            min-width: 100%;
+            width: 0;
+        
+        }
+    }
+
+    figure.effect-hera h4,
+    figure.effect-hera p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
+        -webkit-transform-origin: 50%;
+        transform-origin: 50%;
+    }
+}
