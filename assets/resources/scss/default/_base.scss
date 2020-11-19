@@ -124,7 +124,7 @@ input:focus::-moz-placeholder {
 .btn {
 	background: $btn_bg;
 	padding: 27px 44px;
-	color: #fff;
+	color: $black;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 16px;
@@ -135,7 +135,7 @@ input:focus::-moz-placeholder {
 	letter-spacing: 1px;
 	line-height: 0;
 	margin-bottom: 0;
-
+	font-weight: 600;
 	transition: color 0.4s linear;
 	position: relative;
 	z-index: 1;
@@ -150,7 +150,7 @@ input:focus::-moz-placeholder {
 		top: 0;
 		width: 101%;
 		height: 101%;
-		background: #064b21;
+		background: #c49807;
 		z-index: 1;
 		border-radius: 5px;
 		transition: transform 0.5s;
@@ -164,7 +164,7 @@ input:focus::-moz-placeholder {
 
 .btn:hover::before {
 	transform: scaleX(1);
-	color: #fff !important;
+	color: $black !important;
 	z-index: -1;
 }
 
@@ -270,10 +270,10 @@ input:focus::-moz-placeholder {
 		flex-wrap: wrap;
 		span{
 			margin-left: 0.4rem;
-			color: $theme-color2;	
+			color: $black;	
 		}
 		a{
-			color: $theme-color2;	
+			color: $black;	
 		}
 		.social-btns a:hover,
 		span a:hover{

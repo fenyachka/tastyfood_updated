@@ -28,7 +28,7 @@
 
                     a {
                         font-family: $font_1;
-                        color: #091a23;
+                        color: $black;
                         font-weight: 400;
                         padding: 39px 24px;
                         display: block;
@@ -53,12 +53,12 @@
                     }
                     &:hover {
                         & > a {
-                            color: $theme-color2;
+                            color: $black;
                         }
                     }
                     &.show {
                         a.nav-link {
-                            color: $theme-color2;
+                            color:  #160e0e;
                         }
                     }
                 }
@@ -76,6 +76,7 @@
                         position: absolute;
                         width: 170px;
                         background: #fff;
+                       
                         box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
                         padding: 17px 0;
                     }
@@ -87,10 +88,11 @@
                     & > a.dropdown-item {
                         padding: 6px 15px !important;
                         font-size: 16px;
+                        color: $black;
                         text-transform: capitalize;
                         margin: 0;
                         &:hover {
-                            color: $theme-color2;
+                            color: $black;
                             background: none;
                             margin-left: 7px;
                         }
@@ -115,7 +117,7 @@
     .logo {
         img {
             width: auto;
-            height: 5rem;
+            height: 4.5rem;
 
             @media #{$xs} {
                 width: 9rem;
@@ -125,7 +127,7 @@
     }
 }
 .header-2 {
-    
+    color: $black;
     &.header-transparent {
         @media #{$xs} {
             position: relative !important;
@@ -145,7 +147,7 @@
 }
 
 .header-3{
-        background-color: $theme-color2-light-2;
+        background-color: $theme-color;
         min-height: 16.5rem;
         @media #{$md}{
             min-height: 18rem;
@@ -156,6 +158,7 @@
         @media #{$xs}{
             min-height: 14rem;
         }
+   
     
 }
 
@@ -189,9 +192,10 @@
         width: 30%;
         padding-left: 15px;
         padding-right: 15px;
+        color:#fdfdfd;
 
         .logo img {
-            width: 10.5rem;
+            width: 7.5rem;
             height: auto;
             @media #{$mobile_device}{
                 width: 7.5rem;
@@ -201,10 +205,10 @@
             text-align: right;
             a {
                 font-size: 1.25rem;
-                opacity: 0.6;
+                opacity: 0.8;
                 padding: 1rem 1rem 0;
                 font-size: 1.3125rem;
-                color: $theme-color2;
+                color: #fdfdfd;
                 @media#{$mobile_device}{
                     padding: 1rem 0.2rem 0;
                 }
@@ -226,6 +230,7 @@
     &.fixed-top {
         background: rgb(255, 255, 255);
         padding: 0rem calc(1rem + 100px);
+        color: $black;
         animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
         -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
         .main-menu {
@@ -262,14 +267,14 @@
     background-color: unset;
     &-item{
         &.active{
-            color: inherit;
+            color: #fdfdfd;
         }
         a{
     
-            color: $theme-color2;
+            color:#c89900;
         }
         +.breadcrumb-item::before{
-            color: $theme-color2;
+            color: #c89900;
         }
     }
     

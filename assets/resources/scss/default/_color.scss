@@ -14,7 +14,7 @@ $heading_color2: rgb(36, 43, 94);
 //Theme color
 $theme-color: #117a97;
 $theme-color1:#f1cf69;
-$theme-color2: #08632b;
+$theme-color2: #FFC300;
 $theme-color2-light:#6ba180;
 $theme-color2-light-2 :#d6ebde;
 // $theme-color2: #1f2b7b;
@@ -26,7 +26,7 @@ $body-text-color: #212025;
 $hr-border-color:#eceff8;
 
 // btn and Section color
-$btn_bg: #08642b;
+$btn_bg: #FFC300;
 
 // Section Bg
 $section_bg1: #454545;
@@ -101,7 +101,9 @@ background: $brand-bg;
 .testimonial-bg{
 background: $testimonial-bg;
 }
-
+.dark-bg{
+    background:$black;
+}
 
 /*--- color------*/
 .white-color {
